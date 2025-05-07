@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_send_image"
+        android:title="Gửi ảnh"
+        android:icon="@drawable/ic_you"/>
+    <item
+        android:id="@+id/action_video"
+        android:title="Picture"
+        android:icon="@drawable/ic_you"/>
+</menu>

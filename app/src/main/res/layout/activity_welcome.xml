@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imgLogoWelcome"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/app_logo"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvWelcomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Konect"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toBottomOf="@id/imgLogoWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvWelcomeSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kết nối, chia sẻ và trao đổi thông tin với mọi người"
+        android:textColor="@color/primary_text"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="12dp" />
+
+    <!-- Login Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingVertical="12dp"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/accent_color"
+        app:layout_constraintBottom_toTopOf="@id/button_signup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Button Sign Up -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginTop="32dp"
+        android:paddingVertical="12dp"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="48dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

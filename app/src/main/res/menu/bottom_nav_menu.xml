@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item-->
+<!--        android:id="@+id/navigation_file"-->
+<!--        android:icon="@drawable/ic_file" android:title="File"/>-->
+    <item
+        android:id="@+id/navigation_messages"
+        android:icon="@drawable/ic_messages" android:title="Messages"/>
+    <item
+        android:id="@+id/navigation_new_friends"
+        android:icon="@drawable/ic_person_add" android:title="New Friends"/>
+    <item
+        android:id="@+id/navigation_you"
+        android:icon="@drawable/ic_you" android:title="You"/>
+</menu>

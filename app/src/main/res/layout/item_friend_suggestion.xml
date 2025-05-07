@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingStart="16dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:id="@+id/image_view_profile_picture"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_you"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_you" />
+
+    <TextView
+        android:id="@+id/text_view_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_profile_picture"
+        app:layout_constraintEnd_toStartOf="@+id/button_add_friend"
+        app:layout_constraintStart_toEndOf="@+id/image_view_profile_picture"
+        app:layout_constraintTop_toTopOf="@+id/image_view_profile_picture"
+        tools:text="Tên Người Dùng" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="Kết bạn"
+        android:textSize="12sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
