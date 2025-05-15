@@ -1,29 +1,26 @@
 package com.social.messenger.models;
 
-public class Message {
+public class GroupMessage {
     private String id;
+    private String groupId;
     private String senderId;
-    private String receiverId;
     private String text;
     private String fileUrl;
     private String type; // "image" hoặc "video"
     private long timestamp;
-    private String status; // sử dụng enum dạng String
 
     // Constructors, Getters, Setters...
-
-    public Message() {
+    public GroupMessage() {
     }
 
-    public Message(String id, String senderId, String receiverId, String text, String fileUrl, String fileType, Long timestamp, String status) {
+    public GroupMessage(String id, String groupId, String senderId, String text, String fileUrl, String mediaType, long timestamp) {
         this.id = id;
+        this.groupId = groupId;
         this.senderId = senderId;
-        this.receiverId = receiverId;
         this.text = text;
         this.fileUrl = fileUrl;
-        this.type = fileType;
+        this.type = mediaType;
         this.timestamp = timestamp;
-        this.status = status;
     }
 
     public String getId() {
@@ -34,20 +31,20 @@ public class Message {
         this.id = id;
     }
 
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
+
     public String getSenderId() {
         return senderId;
     }
 
     public void setSenderId(String senderId) {
         this.senderId = senderId;
-    }
-
-    public String getReceiverId() {
-        return receiverId;
-    }
-
-    public void setReceiverId(String receiverId) {
-        this.receiverId = receiverId;
     }
 
     public String getText() {
@@ -74,20 +71,11 @@ public class Message {
         this.type = type;
     }
 
-    public Long getTimestamp() {
+    public long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Long timestamp) {
+    public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }
-

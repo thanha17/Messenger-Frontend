@@ -87,7 +87,7 @@
                     app:boxStrokeColor="@color/accent_color">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edit_text_full_name"
+                        android:id="@+id/edt_full_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Full Name"
@@ -107,7 +107,7 @@
                     app:boxStrokeColor="@color/accent_color">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edit_text_your_email"
+                        android:id="@+id/edt_your_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Email address"
@@ -127,7 +127,7 @@
                     app:boxStrokeColor="@color/accent_color">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edit_text_date_of_birth"
+                        android:id="@+id/edt_date_of_birth"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Date of Birth"
@@ -150,7 +150,7 @@
                     app:startIconTint="@color/accent_color">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edit_text_new_password"
+                        android:id="@+id/edt_new_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Password"
@@ -171,7 +171,7 @@
                     app:startIconTint="@color/accent_color">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edit_text_confirm_password"
+                        android:id="@+id/edt_confirm_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Confirm Password"
