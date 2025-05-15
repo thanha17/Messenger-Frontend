@@ -1,29 +1,17 @@
-package com.social.messenger.models;
+package com.social.messenger.dto;
 
-public class Message {
+public class ChatMess {
     private String id;
     private String senderId;
     private String receiverId;
+    private String groupId;
     private String text;
     private String fileUrl;
     private String type; // "image" hoặc "video"
     private long timestamp;
-    private String status; // sử dụng enum dạng String
+    private String status;
 
-    // Constructors, Getters, Setters...
-
-    public Message() {
-    }
-
-    public Message(String id, String senderId, String receiverId, String text, String fileUrl, String fileType, Long timestamp, String status) {
-        this.id = id;
-        this.senderId = senderId;
-        this.receiverId = receiverId;
-        this.text = text;
-        this.fileUrl = fileUrl;
-        this.type = fileType;
-        this.timestamp = timestamp;
-        this.status = status;
+    public ChatMess() {
     }
 
     public String getId() {
@@ -50,6 +38,14 @@ public class Message {
         this.receiverId = receiverId;
     }
 
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
+
     public String getText() {
         return text;
     }
@@ -74,11 +70,11 @@ public class Message {
         this.type = type;
     }
 
-    public Long getTimestamp() {
+    public long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Long timestamp) {
+    public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -90,4 +86,3 @@ public class Message {
         this.status = status;
     }
 }
-

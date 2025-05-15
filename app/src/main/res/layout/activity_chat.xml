@@ -161,7 +161,9 @@
             app:layout_constraintStart_toEndOf="@+id/image_view_attach"
             app:layout_constraintEnd_toStartOf="@+id/image_view_emoji"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_max="280dp"/>
 
         <ImageView
             android:id="@+id/image_view_emoji"
@@ -186,6 +188,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
+        <ImageView
+            android:id="@+id/image_view_send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_send"
+            app:tint="#6200EE"
+            android:visibility="gone"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toEndOf="@+id/edit_text_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -3,14 +3,14 @@ package com.social.messenger.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.social.messenger.R;
+import com.social.messenger.utils.SharedPrefManager;
 
 public class WelcomeActivity extends AppCompatActivity {
-    private Button btnLogin,btnSignUp;
+
 
     // Hàm khởi tạo giao diện
     @Override
@@ -18,14 +18,19 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome); // giao diện chào
 
-        btnLogin = findViewById(R.id.button_login);
-        btnSignUp = findViewById(R.id.button_signup);
-
-        btnLogin.setOnClickListener(v -> {
-            startActivity(new Intent(this, LoginActivity.class));
-        });
-        btnSignUp.setOnClickListener(v -> {
-            startActivity(new Intent(this, SignUpActivity.class));
-        });
+        // Kiểm tra nếu người dùng đã đăng nhập rồi
+        if (SharedPrefManager.getInstance(this).isLoggedIn()) {
+            // Nếu đã đăng nhập, chờ 2 giây rồi chuyển đến MainActivity
+            new Handler().postDelayed(() -> {
+                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+                finish();
+            }, 2000); // 2000ms = 2 giây
+        } else {
+            // Nếu chưa đăng nhập, chờ 2 giây rồi chuyển đến LoginActivity
+            new Handler().postDelayed(() -> {
+                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+                finish();
+            }, 2000); // 2000ms = 2 giây
+        }
     }
 }
